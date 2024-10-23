@@ -1,0 +1,11 @@
+<% content_for :title, "New shot" %>
+
+<h1>New shot</h1>
+
+<%= render "form", shot: @shot %>
+
+<br>
+
+<div>
+  <%= link_to "Back to shots", shots_path %>
+</div>
