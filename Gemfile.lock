@@ -475,6 +475,7 @@ DEPENDENCIES
   bulma-rails (~> 1.0.0)
   capybara
   carrierwave
+  dartsass-rails (~> 0.5.1)
   debug
   devise
   gravatar_image_tag
