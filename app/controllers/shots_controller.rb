@@ -1,5 +1,6 @@
 class ShotsController < ApplicationController
   before_action :set_shot, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[new create edit destroy]
 
   # GET /shots or /shots.json
   def index
@@ -65,6 +66,9 @@ class ShotsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shot_params
+      return unless params[:shot]
+
+      params[:shot][:user_id] = current_user&.id
       params.require(:shot).permit(:title, :description, :user_id)
     end
 end
