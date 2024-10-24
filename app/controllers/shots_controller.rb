@@ -22,7 +22,8 @@ class ShotsController < ApplicationController
 
   # POST /shots or /shots.json
   def create
-    @shot = Shot.new(shot_params)
+    @shot = Shot.new(title: shot_params[:title], description: shot_params[:description], user_id: shot_params[:user_id])
+    @shot.shot_image.attach(shot_params[:shot_image]) if shot_params[:shot_image]
 
     respond_to do |format|
       if @shot.save
@@ -69,6 +70,6 @@ class ShotsController < ApplicationController
       return unless params[:shot]
 
       params[:shot][:user_id] = current_user&.id
-      params.require(:shot).permit(:title, :description, :user_id)
+      params.require(:shot).permit(:title, :description, :user_id, :shot_image)
     end
 end

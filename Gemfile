@@ -48,9 +48,11 @@ gem "impressionist"
 
 gem "jquery-rails"
 
-gem "gravatar_image_tag"
-
 gem "acts_as_votable"
+
+gem "activestorage"
+
+gem "image_processing", ">= 1.2"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
