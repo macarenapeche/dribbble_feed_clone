@@ -159,7 +159,7 @@ GEM
     google-protobuf (4.28.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
-    guard (2.18.1)
+    guard (2.19.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -484,7 +484,7 @@ DEPENDENCIES
   dartsass-rails (~> 0.5.1)
   debug
   devise
-  guard (~> 2.14, >= 2.14.1)
+  guard (~> 2.19)
   guard-livereload (~> 2.5, >= 2.5.2)
   image_processing (>= 1.2)
   importmap-rails
